@@ -1,4 +1,4 @@
-const API_KEY = "40d17ecc48a627df54760b7c5f3649b1";
+const apiKey = process.env.API_KEY;
 const weatherIcon = document.querySelector(".weather-icon");
 
 const getLocation = () => {
@@ -9,7 +9,7 @@ const getLocation = () => {
 
 const fetchWeather = async () => {
     let location = getLocation();
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location.city},${location.country}&appid=${API_KEY}`,
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location.city},${location.country}&appid=${apiKey}`,
 
 
         {
