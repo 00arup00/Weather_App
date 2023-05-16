@@ -27,30 +27,8 @@ const fetchWeather = async () => {
     document.querySelector(".description").innerHTML = data.weather[0].description;
     document.querySelector(".wind").innerHTML = `${data.wind.speed}km/h `;
 
-    if (data.weather[0].main == "Haze") {
-        weatherIcon.src = "images/haze.png";
-    }
-    else if (data.weather[0].main == "Clear") {
-        weatherIcon.src = "images/clear.png";
-    }
-    else if (data.weather[0].main == "Rain") {
-        weatherIcon.src = "images/rain.png";
-    }
-    else if (data.weather[0].main == "Drizzle") {
-        weatherIcon.src = "images/drizzle.png";
-    }
-    else if (data.weather[0].main == "Mist") {
-        weatherIcon.src = "images/mist.png";
-    }
-    else if (data.weather[0].main == "Snow") {
-        weatherIcon.src = "images/snow.png";
-    }
-    else if (data.weather[0].main == "Clouds") {
-        weatherIcon.src = "images/clouds.png";
-    }
-    else if (data.weather[0].main == "Dust") {
-        weatherIcon.src = "images/dust.png";
-    }
+    let weatherDesc = data.weather[0].main.toLowerCase();
+    weatherIcon.src = `images/${weatherDesc}.png`;
 }
 
 
