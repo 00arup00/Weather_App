@@ -1,4 +1,5 @@
-const apiKey = process.env.API_KEY;
+// const apiKey = process.env.API_KEY;
+const apiKey = "40d17ecc48a627df54760b7c5f3649b1";
 const weatherIcon = document.querySelector(".weather-icon");
 
 const getLocation = () => {
